@@ -1,0 +1,12 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  .HeaderOption {
+    display: flex;
+    gap: 1.5rem;
+  }
+}

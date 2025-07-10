@@ -1,0 +1,60 @@
+.BoxContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 30rem;
+  margin: 0 auto;
+
+  .EmptyBox,
+  .BoxItem {
+    aspect-ratio: 1.2/1;
+    box-sizing: border-box;
+  }
+
+  .EmptyBox {
+    background-color: rgb(213, 212, 212);
+    margin: 0;
+  }
+
+  .BoxItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+
+    .BoxNumber {
+      background-color: rgb(109, 201, 201);
+      width: 0.5rem;
+      height: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      color: white;
+      font-weight: 400;
+    }
+
+    .BoxTitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .BoxSub {
+      font-size: 0.4rem;
+      font-weight: 500;
+      line-height: 1.2;
+      white-space: pre-line;
+    }
+
+    .GoButton {
+      width: 1.5rem;
+      background-color: white;
+      border: none;
+      font-size: 0.3rem;
+      padding: 0.3rem 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.SignupScreen {
+  background-color: #fff;
+  border: 1px solid #e5e5ec;
+  border-radius: 1rem;
+  padding: 3.75rem 9.38rem;
+  width: 30rem;
+  margin: 0 auto;
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  .SignupInputField {
+    display: flex;
+    flex-direction: column;
+    gap: 1.87rem;
+  }
+}
+
+.SignupInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .label {
+    margin: 0;
+    color: #767676;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .inputWrapper {
+    position: relative;
+    width: 100%;
+
+    .inputField {
+      width: 100%;
+      padding: 1rem;
+      padding-right: 6rem;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    .optionButton {
+      position: absolute;
+      width: 4.5rem;
+      height: 2.5rem;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #eeeeee;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+  }
+}
+
+.SignupButton {
+  background-color: rgb(130, 130, 187);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 3.5rem;
+  padding: 0.8rem;
+  cursor: pointer;
+
+  .SignupButtonText {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,27 @@
+.noti-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.noti-title {
+  width: 80%;
+  text-align: start;
+}
+
+.noti-container {
+  background-color: white;
+  border-radius: 30px;
+  margin: 3rem;
+}
+
+.notiBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.notiBox-line {
+  display: flex;
+  flex-direction: row;
+}
