@@ -5,11 +5,24 @@ import Footer from "./Footer";
 
 const MainLayout = () => {
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+      }}
+    >
       <Header />
-      <Outlet />
+      <div
+        style={{
+          width: "60vw",
+          margin: "0 auto", // 가운데 정렬
+        }}
+      >
+        <Outlet />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

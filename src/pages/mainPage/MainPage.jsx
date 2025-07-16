@@ -7,7 +7,6 @@ import "./main.scss";
 const MainPage = () => {
   return (
     <ScreenContainer>
-      <Header />
       <div></div>
       <div className="BoxContainer">
         <MainBox
