@@ -9,6 +9,7 @@ const NotiDetailBox = ({ noti }) => {
         <p>{noti.number}</p>
       </div>
       <p>{noti.date}</p>
+      <p>{noti.content}</p>
     </div>
   );
 };
