@@ -78,7 +78,8 @@
   flex-direction: column;
   gap: 3rem;
 }
-.PostDetailContent {
+.PostDetailContent,
+.PostCreateContainer {
   background-color: white;
   border-radius: 0.5rem;
   padding: 3rem 4rem;

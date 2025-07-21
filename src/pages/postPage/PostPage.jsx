@@ -10,6 +10,9 @@ const PostPage = () => {
   const goDetailHandler = (id) => {
     navigation(`detail/${id}`);
   };
+  const goCreateHandler = () => {
+    navigation(`create`);
+  };
 
   const [selected, setSelected] = useState("네편 답변");
 
@@ -28,7 +31,7 @@ const PostPage = () => {
       <h1>인기게시글</h1>
       <div className="PostHeader">
         <h2>게시글</h2>
-        <button>게시글 작성</button>
+        <button onClick={goCreateHandler}>게시글 작성</button>
       </div>
 
       <div className="PostItem-Container">

@@ -9,6 +9,7 @@ import NotiDetailPage from "./pages/notiPage/NotiDetailPage";
 import ResultPage from "./pages/resultPage/ResultPage";
 import PostPage from "./pages/postPage/PostPage";
 import PostDetailPage from "./pages/postPage/PostDetailPage";
+import PostCreatePage from "./pages/postPage/PostCreatePage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/noti/detail/:id" element={<NotiDetailPage />} />
           <Route path="/result" element={<ResultPage />} />
           <Route path="/post" element={<PostPage />} />
+          <Route path="/post/create" element={<PostCreatePage />} />
           <Route path="/post/detail/:id" element={<PostDetailPage />} />
         </Route>
       </Routes>
