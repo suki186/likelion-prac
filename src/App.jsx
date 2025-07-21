@@ -6,7 +6,7 @@ import NotiPage from "./pages/notiPage/NotiPage";
 import { Route, Routes, Navigate } from "react-router-dom";
 import MainLayout from "./components/MainLayout";
 import NotiDetailPage from "./pages/notiPage/NotiDetailPage";
-import ResultPage from "./pages/resultPage/ResultPage";
+// import ResultPage from "./pages/resultPage/ResultPage";
 import PostPage from "./pages/postPage/PostPage";
 import PostDetailPage from "./pages/postPage/PostDetailPage";
 import PostCreatePage from "./pages/postPage/PostCreatePage";
@@ -22,7 +22,7 @@ function App() {
           <Route path="/home" element={<MainPage />} />
           <Route path="/noti" element={<NotiPage />} />
           <Route path="/noti/detail/:id" element={<NotiDetailPage />} />
-          <Route path="/result" element={<ResultPage />} />
+          {/* <Route path="/result" element={<ResultPage />} /> */}
           <Route path="/post" element={<PostPage />} />
           <Route path="/post/create" element={<PostCreatePage />} />
           <Route path="/post/detail/:id" element={<PostDetailPage />} />

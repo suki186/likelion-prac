@@ -9,12 +9,13 @@ const MainLayout = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
+        minHeight: "100vh",
       }}
     >
       <Header />
       <div
         style={{
+          flex: 1,
           width: "60vw",
           margin: "0 auto", // 가운데 정렬
         }}

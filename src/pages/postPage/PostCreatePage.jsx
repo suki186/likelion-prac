@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import "./post.scss";
+import { useNavigate } from "react-router-dom";
 
 const PostCreatePage = () => {
   const [type, setType] = useState("네편 답변");
+
+  const navigation = useNavigate();
+  const goPostPageHandler = () => {
+    navigation(`/post`);
+  };
+
   return (
-    <>
+    <div className="PostCreate">
       <div className="PostCreateContainer">
         <div>
-          <h2>게시글 제목</h2>
-          <input type="text" placeholder="질문 제목을 입력해 주세요" />
+          <p>게시글 제목</p>
+          <input
+            type="text"
+            placeholder="질문 제목을 입력해 주세요"
+            className="titleInput"
+          />
         </div>
 
-        <h2>게시글 선택</h2>
-        <div>
+        <p>게시판 선택</p>
+        <div className="radioGroup">
           <label>
             <input
               type="radio"
@@ -36,16 +47,22 @@ const PostCreatePage = () => {
         </div>
 
         <div>
-          <h2>게시글 내용</h2>
-          <textarea placeholder="질문 내용을 입력해 주세요" />
+          <p>게시글 내용</p>
+          <textarea
+            placeholder="질문 내용을 입력해 주세요"
+            className="postTextarea"
+          />
         </div>
 
         <div>
-          <h2>내 결과지 가져오기(선택)</h2>
+          <p>내 결과지 가져오기(선택)</p>
+          <div className="imageBox">+</div>
         </div>
       </div>
-      <button>등록하기</button>
-    </>
+      <button className="postCreateBtn" onClick={goPostPageHandler}>
+        등록하기
+      </button>
+    </div>
   );
 };
 
