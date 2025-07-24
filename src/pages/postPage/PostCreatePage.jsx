@@ -1,12 +1,35 @@
 import React, { useState } from "react";
 import "./post.scss";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const PostCreatePage = () => {
   const [type, setType] = useState("네편 답변");
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   const navigation = useNavigate();
-  const goPostPageHandler = () => {
+  const handleSubmit = async () => {
+    try {
+      const data = {
+        user_id: 1,
+        worksheet_id: 1,
+        title: title,
+        content: content,
+        type: 1,
+      };
+
+      const response = await axios.post(
+        "http://43.202.217.156:8080/api/posting",
+        data
+      );
+      console.log(response);
+    } catch (error) {
+      throw Error("게시글작성: " + error);
+    }
+
+    setTitle("");
+    setContent("");
     navigation(`/post`);
   };
 
@@ -16,6 +39,8 @@ const PostCreatePage = () => {
         <div>
           <p>게시글 제목</p>
           <input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             type="text"
             placeholder="질문 제목을 입력해 주세요"
             className="titleInput"
@@ -51,6 +76,8 @@ const PostCreatePage = () => {
           <textarea
             placeholder="질문 내용을 입력해 주세요"
             className="postTextarea"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
           />
         </div>
 
@@ -59,7 +86,7 @@ const PostCreatePage = () => {
           <div className="imageBox">+</div>
         </div>
       </div>
-      <button className="postCreateBtn" onClick={goPostPageHandler}>
+      <button className="postCreateBtn" onClick={handleSubmit}>
         등록하기
       </button>
     </div>

@@ -1,7 +1,16 @@
 import React from "react";
 import "../post.scss";
+import { useNavigate } from "react-router-dom";
 
-const PostItem = ({ post, onClick }) => {
+const PostItem = ({ post }) => {
+  const navigation = useNavigate();
+  const handleClick = () => {
+    // 로컬스토리지에 게시물 id 저장
+    localStorage.setItem("postId", post.id);
+    navigation(`detail`);
+    //onClick();
+  };
+
   return (
     <div className="PostItem">
       <div
@@ -12,12 +21,12 @@ const PostItem = ({ post, onClick }) => {
         }}
       >
         <h4>Q. {post.title}</h4>
-        <p className="PostText">{post.date}</p>
+        <p className="PostText">{post.created_at}</p>
       </div>
 
       <div className="PostContent-Container">
         <p className="PostContent">{post.content}</p>
-        <button className="PostButon" onClick={onClick}>
+        <button className="PostButon" onClick={handleClick}>
           자세히 보기
         </button>
       </div>

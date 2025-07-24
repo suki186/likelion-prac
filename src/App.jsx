@@ -10,8 +10,12 @@ import NotiDetailPage from "./pages/notiPage/NotiDetailPage";
 import PostPage from "./pages/postPage/PostPage";
 import PostDetailPage from "./pages/postPage/PostDetailPage";
 import PostCreatePage from "./pages/postPage/PostCreatePage";
+import { useState } from "react";
+import p from "./datas/posts.json";
 
 function App() {
+  const [posts, setPosts] = useState(p);
+
   return (
     <div className="App">
       <Routes>
@@ -23,9 +27,15 @@ function App() {
           <Route path="/noti" element={<NotiPage />} />
           <Route path="/noti/detail/:id" element={<NotiDetailPage />} />
           {/* <Route path="/result" element={<ResultPage />} /> */}
-          <Route path="/post" element={<PostPage />} />
-          <Route path="/post/create" element={<PostCreatePage />} />
-          <Route path="/post/detail/:id" element={<PostDetailPage />} />
+          <Route
+            path="/post"
+            element={<PostPage posts={posts} setPosts={setPosts} />}
+          />
+          <Route
+            path="/post/create"
+            element={<PostCreatePage setPosts={setPosts} />}
+          />
+          <Route path="/post/detail" element={<PostDetailPage />} />
         </Route>
       </Routes>
     </div>

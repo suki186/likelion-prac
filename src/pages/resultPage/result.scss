@@ -1,0 +1,29 @@
+.toggle-on {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid rgb(32, 22, 126);
+  background-color: rgb(32, 22, 126);
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-off {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid rgb(32, 22, 126);
+  background-color: white;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
